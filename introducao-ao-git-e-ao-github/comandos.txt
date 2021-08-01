@@ -1,0 +1,42 @@
+windows
+cd
+dir
+mkdir
+del / rmdir
+
+unix
+
+cd
+ls
+mkdir
+rm -rf
+
+---
+
+cd ..
+
+openssl sha1 
+
+---
+
+git init
+
+git add 
+
+git commit
+
+git config --global user.email "tonysobreira@gmail.com"
+git config --global user.name "Tony"
+
+
+https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Configura%C3%A7%C3%A3o-Inicial-do-Git
+
+git remote -v
+
+----
+
+
+git pull origin master
+
+
+

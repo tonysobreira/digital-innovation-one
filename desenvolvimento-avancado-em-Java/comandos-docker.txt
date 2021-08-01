@@ -1,0 +1,27 @@
+// powershell
+docker container run -it -m512M --entrypoint bash openjdk:7-jdk
+java -XX:+PrintFlagsFinal -version | grep MaxHeapSize
+
+// sair da imagem
+exit
+
+// listar imagens
+docker ps -a
+
+// java 10 utilizando memória necessária
+docker run -it -m512M --entrypoint bash openjdk:10-jdk
+
+// -m512M: memória limite
+
+////
+
+docker container run -it --cpus 2 openjdk:10-jdk
+Runtime.getRuntime().availableProcessors()
+
+// sair
+/exit
+
+docker container run -it --cpus 1 openjdk:10-jdk
+Runtime.getRuntime().availableProcessors()
+
+// cpus: número de processadores disponíveis

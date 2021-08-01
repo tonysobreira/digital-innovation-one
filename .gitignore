@@ -1,0 +1,12 @@
+.project
+.settings
+.classpath
+.metadata
+.idea
+
+*/bin/*
+*/target/*
+*/servers/*
+
+
+*.class

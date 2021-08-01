@@ -1,0 +1,28 @@
+tomcat 9
+
+create maven project -> simple project
+
+window -> preferences:
+search encoding
+change to utf-8
+
+facets:
+java 1.8
+JavaServer Faces 2.2
+disable library configuration
+	url mapped patterns: 
+	remove all
+	add: *.xhtml
+
+update maven project
+
+scopes:
+@RequestScoped
+@ViewScoped
+@SessionScoped
+@AplicationScoped
+@ConversationScoped
+@Dependent
+@NoneScoped
+
+
