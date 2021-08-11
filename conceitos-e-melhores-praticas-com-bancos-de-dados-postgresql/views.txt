@@ -1,0 +1,16 @@
+views
+
+#aceita joins
+SELECT
+
+#não aceita joins
+INSERT
+UPDATE
+DELETE
+
+WITH LOCAL CHECK OPTION
+validar as opcoes da view presente (nao funciona insert, se determinado campo nao for respeitado)
+
+
+
+

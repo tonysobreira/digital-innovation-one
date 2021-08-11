@@ -1,0 +1,7 @@
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+windows:
+services
+postgresql-x64-12
+
+postgresql.conf

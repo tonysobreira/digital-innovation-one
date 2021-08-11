@@ -1,0 +1,40 @@
+postgresql.conf
+C:\Program Files\PostgreSQL\12\data\postgresql.conf
+examples:
+listen_addresses = '*'
+port = 5432
+max_connections = 100
+
+listen_addresses
+    enderecos para escutar/liberar conexoes
+    nao colocar * em producao
+
+port
+    padrao 5432
+
+max_connections
+    numero maximo de conexoes simultaneas
+
+superuser_reserved_connections
+    conexoes reservadas para superusers
+
+shared_buffers
+    tamanho da memoria da compartilhada, cache
+    recomendado = 25% da memoria
+
+work_mem
+    memoria exclusiva para agrupamento e ordenacao
+    (order by, distinct, merge joins)
+
+mainetance_work_mem
+    (vacuum, index, alter table)
+
+
+view pg_settings
+
+select name, setting
+from pg_settings;
+
+show [parametro]
+show port
+

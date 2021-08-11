@@ -1,0 +1,12 @@
+pg_hba.conf
+controla autenticacao dos usuarios
+
+metodos
+    truest (sem senha)
+    md5 (senha criptografada md5)
+    password (sem criptogracao)
+
+nao usar address 0.0.0.0/0 em producao
+
+
+

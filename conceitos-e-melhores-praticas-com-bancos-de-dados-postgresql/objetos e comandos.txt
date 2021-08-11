@@ -1,0 +1,19 @@
+objetos e comandos
+
+1. database / schema / objetos
+
+2. tabelas / colunas / tipos de dados
+
+3. dml e ddl
+
+
+
+
+
+
+
+
+
+
+
+

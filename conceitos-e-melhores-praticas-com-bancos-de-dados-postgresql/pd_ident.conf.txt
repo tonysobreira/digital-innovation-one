@@ -1,0 +1,5 @@
+pd_ident.conf
+
+mapea o usuario do sistema operacional 
+com o usuario do banco de dados
+
