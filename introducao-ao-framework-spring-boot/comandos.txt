@@ -22,3 +22,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8085
 
 --- variável de ambiente
 export ENV_DB_URL=jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+
+--- profile terminal
+-Dspring.profiles.active=dev
+
