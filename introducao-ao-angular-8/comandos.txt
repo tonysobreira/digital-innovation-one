@@ -1,0 +1,25 @@
+#versao do node
+node -v
+#versao do npm
+npm -v
+#instalar o angular cli
+npm install -g @angular/cli
+#versao do angular/cli
+ng version
+
+#instalando na versao 8
+npm init
+npm i @angular/cli@8
+#criando aplicacao
+ng new course-manager
+
+npm install bootstrap
+
+npm install font-awesome
+
+#server
+npm install
+node serve.js
+
+
+

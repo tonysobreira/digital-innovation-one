@@ -1,0 +1,9 @@
+{{ title }}
+<br />
+{{ name }}
+<br />
+<h2>One Way Databind</h2>
+<input [ngModel]="name" name="name" >
+<br />
+<h2>Two Way Databind</h2>
+<input [(ngModel)]="name" name="name" >
