@@ -1,0 +1,83 @@
+#angular material
+ng new mat
+
+npm start
+
+#material
+https://material.angular.io/components/card/overview
+https://material.angular.io/components/form-field/overview
+
+#rxjs
+https://www.learnrxjs.io/learn-rxjs/operators/transformation/map
+https://www.learnrxjs.io/learn-rxjs/operators/filtering/filter
+https://www.learnrxjs.io/learn-rxjs/operators/filtering/first
+
+https://stackblitz.com/edit/typescript-a7bnxb?file=index.ts&devtoolsheight=100
+https://stackblitz.com/edit/typescript-4g4cys?file=index.ts&devtoolsheight=100
+https://stackblitz.com/edit/typescript-t8hseq?file=index.ts&devtoolsheight=100
+
+#json server
+https://github.com/typicode/json-server
+
+npm install -g json-server
+
+#run backend
+json-server --watch db.json
+
+
+
+https://angular.io/api/forms/FormBuilder
+https://material.angular.io/components/form-field/overview
+
+#generate service
+ng g s shared/components/campos/validarCampos --nospec
+
+
+#dependencia schematics
+npm install @schematics/angular@7.0.7 --save-dev
+
+#generate module
+ng g m shared/components/campos
+
+#generate component
+ng g c shared/components/campos/input-text --nospec
+ng g c shared/components/campos/input-number --nospec
+ng g c shared/components/campos/input-date --nospec
+ng g c shared/components/campos/input-textarea --nospec
+ng g c shared/components/campos/input-select --nospec
+
+#http service
+ng g s core/filmes --nospec
+
+#filme interface
+ng g i shared/models/filme
+
+ng g i shared/models/alerta
+
+
+
+https://material.angular.io/components/dialog/examples
+
+ng g c shared/components/alerta --nospec --module app
+
+#infinite scroll
+https://www.npmjs.com/package/ngx-infinite-scroll
+npm install ngx-infinite-scroll --save
+
+https://github.com/typicode/json-server
+GET /posts?_page=7
+GET /posts?_page=7&_limit=20
+
+... spread operator (concatenacao de arrays)
+
+
+ng g i shared/models/configParams
+ng g i shared/models/campoGenerico
+
+ng g s core/configParams --nospec
+
+
+ng g c filmes/visualizarFilmes --nospec
+
+
+
