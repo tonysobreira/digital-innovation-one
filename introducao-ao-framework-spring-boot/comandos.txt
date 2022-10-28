@@ -1,0 +1,28 @@
+mvn spring-boot:run
+
+mvn package && java -jar target/spring-boot-example-0.1.0.jar
+
+mvn clean package
+
+jar tf springboot.jar | less
+
+trocar para packaging war
+
+colocar o war na pasta webapps do tomcat
+
+/bin executar startup.sh
+
+
+
+--- subir em porta diferente do .properties
+
+mvn spring-boot:run -Dserver.port=8085
+for spring boot 2.0+
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8085
+
+--- variável de ambiente
+export ENV_DB_URL=jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+
+--- profile terminal
+-Dspring.profiles.active=dev
+

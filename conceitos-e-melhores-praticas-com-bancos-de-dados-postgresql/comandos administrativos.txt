@@ -1,0 +1,34 @@
+comandos administrativos
+
+ubuntu
+
+pg_lsclusters
+    lista todos os clusters
+
+pg_createcluster <version> <cluster name>
+    cria um novo cluster
+
+pg_dropcluster <version> <cluster>
+    apaga um cluster
+
+pg_ctlcluster <version> <cluster> <action>
+    start, stop, status, restart
+
+binarios
+createdb
+createuser
+dropdb
+dropuser
+initdb
+pg_ctl
+pg_basebackup
+pg_dump / pg_dumpall
+pg_restore
+psql
+reindexdb
+vaccumdb
+
+dump nao e backup (back up)
+
+vaccum reorganizar tabelas
+

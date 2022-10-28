@@ -1,0 +1,34 @@
+ctrl + 3
+git perspective
+java perspective
+debug perspective
+...
+
+git
+
+team -> share project...
+use or create repository
+
+team -> commit
+
+---
+
+eclipse ctrl+shift+r
+intellij ctrl+n
+
+---
+
+plugin intellij
+key promoter (sugestao de atalhos)
+
+---
+
+vscode
+#extension
+github theme
+
+
+
+
+
+

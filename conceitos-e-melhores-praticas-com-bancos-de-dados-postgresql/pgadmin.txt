@@ -1,0 +1,32 @@
+pgadmin
+
+importante para conexao:
+liberar acesso ao cluster 
+postgresql.conf
+
+liberar acesso ao cluster para o usuario do banco de dados
+pg_hba.conf
+
+criar/editar usuarios
+
+
+linux
+
+comandos:
+pg_lsclusters
+pg_ctlclusters 11 nome start
+pg_ctlclusters 11 nome reload
+
+ALTER USER postgres PASSWORD '1234';
+
+exemplos psql windows
+C:\Program Files\PostgreSQL\12\bin
+psql -U postgres dsvendas
+SELECT * FROM public.tb_sales;
+
+pgadmin
+
+CREATE DATABASE auladb;
+
+
+

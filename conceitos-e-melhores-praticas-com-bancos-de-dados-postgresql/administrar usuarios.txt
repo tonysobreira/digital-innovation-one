@@ -1,0 +1,69 @@
+administrar usuarios
+
+#users/roles/groups
+
+roles e users são alias
+
+
+#grants
+
+
+psql -U postgres
+
+#listar roles
+\du
+ou SELECT * FROM pg_roles;
+
+#sair
+\q
+
+Administrando acessos (GRANT):
+
+pg admin
+CREATE ROLE professores NOCREATEDB NOCREATEROLE INHERIT NOLOGIN NOBYPASSRLS CONNECTION LIMIT 10;
+
+ALTER ROLE professores PASSWORD '123';
+
+--CREATE ROLE daniel LOGIN PASSWORD '123';
+DROP ROLE daniel;
+--Para a ROLE
+--CREATE ROLE daniel LOGIN PASSWORD '123' IN ROLE professores;
+--Faz parte da ROLE
+CREATE ROLE daniel LOGIN PASSWORD '123' ROLE professores;
+
+
+CREATE TABLE teste (nome varchar);
+GRANT ALL ON TABLE teste TO professores;
+--Sem acesso
+--CREATE ROLE daniel LOGIN PASSWORD '123'; 
+--Com acesso
+CREATE ROLE daniel INHERIT LOGIN PASSWORD '123' IN ROLE professores;
+
+REVOKE professores FROM daniel;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

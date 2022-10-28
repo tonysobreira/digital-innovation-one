@@ -1,0 +1,21 @@
+fundamentos structured query language (sql)
+
+DML / CRUD
+
+Truncate
+
+LIKE / ILIKE
+
+LIKE respeita case sensitive
+ILIKE não respeita case sensitive
+
+##Funcoes Agregadas
+## Aggregate Functions
+
+
+
+
+
+
+
+

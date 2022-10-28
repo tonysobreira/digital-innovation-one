@@ -1,0 +1,168 @@
+#Mostrar repositórios remotos
+git remote -v
+
+#adicionar
+git remote add origin https://...
+
+#criar branch
+git checkout -b nova-branch
+
+#mudar branch
+git checkout master
+
+##criar arquivo
+echo > arquivo1.txt
+
+#juntar branches
+#1º ir para a branch que quer
+#2º escolher outra branch para juntar
+git merge nova-branch
+git push origin main
+
+#mostrar branches
+git branch
+
+#mudar nome branch
+#na branch
+git branch -m funcionalidade
+#da branch main
+git branch -m funcionalidade nova-funcionalidade
+
+#deletar branch
+git branch -d nova-funcionalidade
+
+#tudo que está no staging area e salva no stash
+git stash save "Adicionado arquivos iniciando alteracoes"
+git stash list
+git status
+#agora pode mover para outra branch, sem carregar contexto
+
+#restaurar do stash, do index
+git stash pop 1
+
+#limpar stash
+git stash clear
+
+#log
+git log
+git log --oneline
+git log --graph
+gitk
+
+
+#github desktop
+file->options-signin
+file->add local repository
+
+#reverter commits
+git reset
+#orientações:
+#hash
+#head
+
+
+#variações:
+
+#não destrói código
+#colocar arquivos no index/staging
+--soft
+git reset --soft HEAD~1
+
+#não destrói código
+#reverte para work directory, antes do index/staging
+#default
+--mixed
+git reset --mixed HEAD~1
+
+#destrói código/arquivos
+#não move para outros estados
+--hard
+git reset --hard HEAD~1
+
+
+
+#head vai apontar para o hash
+git reset <hash number>
+
+#move a HEAD 1 para trás
+git reset HEAD~1
+
+
+#comandos para reset
+git reset <hash>
+git commit -m "message"
+git pull origin master
+#resolver conflitos
+git push origin master
+
+
+
+
+
+#orientado a HEAD ou hash
+#reverte para todas as alterações do commit escolhido
+git revert
+
+#gera um novo commit, revertendo o commit HEAD ou hash
+#se adicionar um arquivo, será removido
+#código será revertido para o commit escolhido
+
+git revert HEAD~1
+git revert <hash number>
+
+#comandos para revert
+git revert <hash>
+#cria um novo commit
+git push origin master
+
+#estruturação de commits
+#voz imperativa
+#assunto
+ex.: "adiciona a funcionalidade x" e não "funcionalidade x adicionada"
+"se aceito, esse commit adiciona a funcionalidade x"
+#corpo
+#markdown
+
+
+#mudar editor padrão git
+#listar configurações
+git config --global --list
+#visual studio como editor padrão
+git config --global core.editor "code --wait"
+#desfazer, colocando vim
+git config --global --unset core.editor
+git config --global core.editor "vim"
+
+
+#commit finalizando issue
+#palavra reservada Closes #<número do issue>
+Closes #1
+#palavra reservada Ref #<número>
+
+
+#semantic versioninig
+3    .2     .7
+major minor patch
+#major: quebra compatibilidade
+#minor: mantém retrocompatibilidade
+#patch: correções de bugs, pequenas alterações, etc...
+#https://semver.org/
+
+#https://www.conventionalcommits.org/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
