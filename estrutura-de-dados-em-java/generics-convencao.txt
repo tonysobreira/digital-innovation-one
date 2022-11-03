@@ -1,0 +1,9 @@
+/**
+	 * Convenção
+	 * K - Key
+	 * V - Value
+	 * E - Element
+	 * T - Type
+	 * ? - Genérico
+	 * 
+	 */
