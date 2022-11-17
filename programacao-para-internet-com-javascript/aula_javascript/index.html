@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/main.js"></script>
+</head>
+
+<body onload="load()">
+    <h3>Minha página</h3>
+    <button type="button" onclick="clicou()">Clique aqui</button>
+    <p id="agradecimento" onclick="redirecionar()"></p>
+    <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+    <p id="mousemove2" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+    <p style="cursor: pointer;" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+
+    <select onchange="funcaoChange(this)">
+        <option value="1">Valor 1</option>
+        <option value="2">Valor 2</option>
+        <option value="3">Valor 3</option>
+    </select>
+
+    <h4>Valor 1</h4>
+    <input id="input1">
+
+    <h4>Valor 1</h4>
+    <input id="input2">
+
+    <br />
+    <br />
+    <button style="cursor: pointer;" type="button" onclick="somar()">Somar</button>
+
+    <h4>Valor 1</h4>
+    <p>Resultado: <span id="resultado"></span></p>
+
+</body>
+
+</html>
