@@ -1,0 +1,5 @@
+npm init
+npm i parcel-bundler
+
+##tsc typescript compiler
+
