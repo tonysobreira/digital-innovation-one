@@ -1,0 +1,13 @@
+https://home.openweathermap.org/users/sign_in
+
+#start
+ng s
+
+#ng generate modules
+ng g m pages/home
+ng g m pages/bookmarks
+
+#ng generate components
+ng g c pages/home --type page
+
+
