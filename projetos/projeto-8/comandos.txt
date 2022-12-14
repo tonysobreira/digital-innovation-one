@@ -1,0 +1,57 @@
+#backend
+npm init -y
+
+#https://github.com/typicode/json-server
+#https://www.npmjs.com/package/json-server
+npm i json-server
+
+
+#frontend
+#angular
+npm i -g @angular/cli
+
+ng new blog
+
+cd blog
+
+ng serve
+
+#open browser
+ng serve -o
+
+##
+
+ng g c home
+ng g c navbar
+ng g c footer
+ng g c feed
+ng g c contato
+
+##
+
+#boostrap
+npm i bootstrap
+npm i jquery@~3.4.1
+npm i popper.js
+
+#fontawesome
+ng add @fortawesome/angular-fontawesome
+
+#angular.json
+"styles": [
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js"
+            ]
+
+##
+
+#service
+ng g s service/post
+
+
+

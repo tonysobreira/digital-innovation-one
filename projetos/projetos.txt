@@ -5,6 +5,8 @@
 5 - criando-uma-solucao-de-e-commerce-com-microsservicos-em-Java
 6 - recriando-a-interface-do-netflix
 7 - criando-projeto-para-consultar-a-previsao-do-tempo-via-api
+8 - desenvolvendo-seu-blog-com-as-tecnologias-de-java-e-angular
+
 
 
 
