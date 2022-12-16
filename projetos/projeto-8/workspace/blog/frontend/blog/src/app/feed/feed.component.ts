@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../service/post.service';
 import { Post } from '../model/Post';
+import { Comment } from '../model/Comment';
 
 @Component({
   selector: 'app-feed',
@@ -9,46 +10,69 @@ import { Post } from '../model/Post';
 })
 export class FeedComponent implements OnInit {
 
-  listPost: Post[];
+  postList: Post[];
   post: Post;
-  nome: string;
+  author: string;
+  comment: Comment;
+  newCommentText: string;
 
   constructor(private postService: PostService) {
-    this.listPost = [];
+    this.postList = [];
     this.post = new Post;
-    this.nome = '';
+    this.author = '';
+    this.comment = new Comment;
+    this.newCommentText = '';
   }
 
   ngOnInit(): void {
-    this.findPosts();
+    this.findAllPosts();
   }
 
-  findPosts() {
-    this.postService.getPosts().subscribe((data: any) => {
-      this.listPost = data;
+  findAllPosts() {
+    this.postService.findAllPosts().subscribe((data: any) => {
+      this.postList = data;
     })
   }
 
-  cadastrarMensagem() {
-    this.postService.postMensagem(this.post).subscribe((data: any) => {
+  findPostsByAuthor() {
+    this.postService.findPostsByAuthor(this.author).subscribe((data: any) => {
+      this.postList = data;
+    })
+  }
+
+  savePost() {
+    this.postService.savePost(this.post).subscribe((data: any) => {
       //this.post = data;
       //location.assign('/feed');
       this.post = new Post;
-      this.findPosts();
+      this.findAllPosts();
     })
   }
 
-  apagarMensagem(id: any) {
-    this.postService.deleteMensagem(id).subscribe((data: any) => {
-      this.post = data;
-      this.findPosts();
+  deletePost(id: any) {
+    this.postService.deletePost(id).subscribe((data: any) => {
+      //this.post = data;
+      this.findAllPosts();
     })
   }
 
-  findPostsByNome() {
-    this.postService.findPostsByNome(this.nome).subscribe((data: any) => {
-      this.listPost = data;
+  postComment(id: any) {
+    this.comment.body = this.newCommentText;
+    this.comment.postId = id;
+
+    this.postService.saveComment(this.comment).subscribe((data: any) => {
+      this.findAllPosts();
+      this.newCommentText = '';
     })
   }
+
+  deleteComment(id: any) {
+    this.postService.deleteComment(id).subscribe((data: any) => {
+      this.findAllPosts();
+    })
+  }
+
+
+
 
 }

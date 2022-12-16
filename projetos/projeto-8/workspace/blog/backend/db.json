@@ -1,0 +1,86 @@
+{
+  "posts": [
+    {
+      "title": "aa",
+      "text": "aaa",
+      "createdAt": "2022-12-16T18:04:33.704Z",
+      "author": "author 0",
+      "id": 1
+    },
+    {
+      "title": "bb",
+      "text": "bbb",
+      "createdAt": "2022-12-16T18:04:36.272Z",
+      "author": "author 2",
+      "id": 2
+    },
+    {
+      "title": "cc",
+      "text": "cccc",
+      "createdAt": "2022-12-16T18:04:42.480Z",
+      "author": "author 0",
+      "id": 3
+    },
+    {
+      "title": "ddd",
+      "text": "ddddd",
+      "createdAt": "2022-12-16T18:04:44.560Z",
+      "author": "author 1",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "body": "asdasd",
+      "postId": 1,
+      "createdAt": "2022-12-16T18:05:03.266Z",
+      "id": 1
+    },
+    {
+      "body": "zzzz",
+      "postId": 1,
+      "createdAt": "2022-12-16T18:05:17.113Z",
+      "id": 2
+    },
+    {
+      "body": "zxczxczx",
+      "postId": 1,
+      "createdAt": "2022-12-16T18:05:20.257Z",
+      "id": 3
+    },
+    {
+      "body": "bnndfgnfgn",
+      "postId": 3,
+      "createdAt": "2022-12-16T18:05:25.057Z",
+      "id": 4
+    },
+    {
+      "body": "fgnfgnfgnfg",
+      "postId": 3,
+      "createdAt": "2022-12-16T18:05:26.408Z",
+      "id": 5
+    },
+    {
+      "body": "fgnsatnrtnrtn",
+      "postId": 3,
+      "createdAt": "2022-12-16T18:05:27.952Z",
+      "id": 6
+    },
+    {
+      "body": "nrtrtnrtnrtnrtntr",
+      "postId": 3,
+      "createdAt": "2022-12-16T18:05:30.057Z",
+      "id": 7
+    },
+    {
+      "body": "fgbfgbfg",
+      "postId": 3,
+      "createdAt": "2022-12-16T18:05:33.514Z",
+      "id": 8
+    }
+  ],
+  "authors": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

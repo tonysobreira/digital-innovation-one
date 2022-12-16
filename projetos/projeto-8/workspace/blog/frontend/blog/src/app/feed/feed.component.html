@@ -7,56 +7,69 @@
                         alt="Foto do usuário">
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title text-center">Nome do Usuário</h5>
-                    <p class="card-text text-center">Desenvolvedor Web Fullstack.</p>
+                    <h5 class="card-title text-center">User 1</h5>
+                    <p class="card-text text-center">FullStack Web Developer</p>
                     <a href="#" target="_blank" class="btn btn-outline-dark d-flex justify-content-center">Github</a>
 
                     <hr class="mt-4 mb-4">
 
-                    <h6 class="mb-3 text-monospace text-center">Pesquisar por nome</h6>
+                    <h6 class="mb-3 text-monospace text-center">Search by author name</h6>
 
-                    <input type="text" class="form-control mb-3 w-100" [(ngModel)]="nome">
-                    <button class="btn btn-outline-warning w-100" (click)="findPostsByNome()">Pesquisar</button>
+                    <input type="text" class="form-control mb-3 w-100" [(ngModel)]="author">
+                    <button class="btn btn-outline-warning w-100" (click)="findPostsByAuthor()">Search</button>
                 </div>
             </div>
         </div>
 
         <div class="col-md-8">
             <div>
-                <h3 class="text-center mb-4 text-monospace">Digite abaixo os seus comentários:</h3>
+                <h3 class="text-center mb-4 text-monospace">New Post:</h3>
 
                 <div class="form-group">
-                    <label for="nome" class="text-monospace mt-2 mb-2">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome"
-                        [(ngModel)]="post.nome">
+                    <label for="title" class="text-monospace mt-2 mb-2">Title:</label>
+                    <input type="text" name="title" id="title" class="form-control" placeholder="Type the title"
+                        [(ngModel)]="post.title">
                 </div>
                 <div class="form-group">
-                    <label for="mensagem" class="text-monospace mt-2 mb-2">Mensagem:</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="4" class="form-control"
-                        placeholder="Digite a sua mensagem" [(ngModel)]="post.mensagem">
-
-                    </textarea>
+                    <label for="text" class="text-monospace mt-2 mb-2">Text:</label>
+                    <textarea name="text" id="text" cols="30" rows="4" class="form-control" placeholder="Type the text"
+                        [(ngModel)]="post.text"></textarea>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-info mt-3 w-25"
-                        (click)="cadastrarMensagem()">Publicar</button>
+                    <button type="button" class="btn btn-outline-info mt-3 w-25" (click)="savePost()">Publish</button>
                 </div>
 
             </div>
             <hr class="mt-5 mb-5">
 
-            <h3 class="text-center mb-5 text-monospace">Comentários adicionados</h3>
+            <h3 class="text-center mb-5 text-monospace">Posts</h3>
             <div class="container">
-                <div class="card mb-4" *ngFor="let post of listPost">
+                <div class="card mb-4" *ngFor="let post of postList">
                     <div class="card-header">
-                        <h5 class="card-title">{{post.id}}</h5>
+                        <h5 class="card-title">{{post.id}} - {{post.title}}</h5>
                     </div>
+
                     <div class="card-body">
-                        <p class="card-text">{{post.nome}}</p>
-                        <p class="card-text">{{post.mensagem}}</p>
+                        <p class="card-text">{{post.text}}</p>
                     </div>
+
+                    <label for="authors" class="text-monospace mt-2 mb-2">Author:</label>
+                    <p>{{post.author}}</p>
+
+                    <label for="comments" class="text-monospace mt-2 mb-2">Comments:</label>
+                    <ul id="comments" class="list-group" *ngFor="let comment of post.comments">
+                        <li class="list-group-item">{{comment.body}}</li>
+                        <button class="btn btn-danger" (click)="deleteComment(comment.id)">Delete Comment</button>
+                    </ul>
+
+                    <label for="newComment" class="text-monospace mt-2 mb-2">New Comment:</label>
+                    <textarea name="newComment" id="newComment" cols="30" rows="4" class="form-control"
+                        placeholder="Type the comment" [(ngModel)]="newCommentText"></textarea>
+                    <button class="btn btn-info" (click)="postComment(post.id)">Post Comment</button>
+
                     <div class="card-footer d-flex justify-content-end">
-                        <button class="btn btn-danger" (click)="apagarMensagem(post.id)">Apagar Mensagem</button>
+                        <p class="mr-5">Created At: {{post.createdAt | date:'medium'}}</p>
+                        <button class="btn btn-danger" (click)="deletePost(post.id)">Delete Post</button>
                     </div>
                 </div>
             </div>

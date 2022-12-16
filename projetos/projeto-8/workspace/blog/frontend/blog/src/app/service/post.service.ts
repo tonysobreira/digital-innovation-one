@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Post } from '../model/Post';
+import { Comment } from '../model/Comment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,20 +10,35 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  getPosts() {
-    return this.http.get('http://localhost:3000/posts')
+  findAllPosts() {
+    return this.http.get('http://localhost:3000/posts?_embed=comments')
   }
 
-  postMensagem(post: Post) {
+  savePost(post: Post) {
+    post.createdAt = new Date();
+    post.author = 'author ' + Math.floor(Math.random() * 3);
+
     return this.http.post('http://localhost:3000/posts', post)
   }
 
-  deleteMensagem(id: any) {
+  deletePost(id: any) {
     return this.http.delete(`http://localhost:3000/posts/${id}`)
   }
 
-  findPostsByNome(nome: string) {
-    return this.http.get(`http://localhost:3000/posts?nome=${nome}`)
+  findPostsByAuthor(author: string) {
+    return this.http.get(`http://localhost:3000/posts?_embed=comments&author_like=${author}`);
   }
+
+
+  saveComment(comment: Comment) {
+    comment.createdAt = new Date();
+    return this.http.post('http://localhost:3000/comments', comment);
+  }
+
+  deleteComment(id: any) {
+    return this.http.delete(`http://localhost:3000/comments/${id}`)
+  }
+
+
 
 }

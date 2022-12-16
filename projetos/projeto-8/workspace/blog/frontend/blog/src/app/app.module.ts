@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FeedComponent } from './feed/feed.component';
-import { ContatoComponent } from './contato/contato.component';
+import { ContactComponent } from './contact/contact.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     FeedComponent,
-    ContatoComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
