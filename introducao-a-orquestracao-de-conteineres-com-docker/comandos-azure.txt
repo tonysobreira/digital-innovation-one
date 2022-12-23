@@ -1,0 +1,73 @@
+comandos-azure
+
+sudo su
+
+git clone https://github.com/luistkd4/docker101
+
+wget https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb
+apt install ./dive_0.9.2_linux_amd64.deb
+
+
+docker run --name newcontainer hello-world
+
+#se mantem vivo por 1h
+docker run --name hello -d busybox sleep 3600
+
+docker run --name site -d -p 80:80 nginx
+
+curl localhost
+
+netstat -nltp
+
+#criar pasta
+docker exec hello mkdir teste
+
+docker exec -it hello sh
+
+#
+docker stop site
+docker start site
+
+#
+docker logs site
+
+#baixar sem criar container
+docker pull hello-world
+
+
+docker exec hello ls
+
+docker login
+
+#container a partir da imagem busybox, cria uma imagem hello
+#container <-- busybox = hello --> hello
+#commit
+docker commit --author="Tony" --message="Imagem com commit" hello hello
+
+docker tag hello tonysobreira/hello:1.0
+
+docker search hello
+
+docker run -d --name hello-2 tonysobreira/hello:1.0 sleep 3600
+
+docker exec hello-2 ls
+
+docker run -d --name hello-3 tonysobreira/hello:1.0 mkdir export
+docker export hello-3 > export.tar
+cat export.tar | docker import - hello-export
+docker run -d --name hello-4 hello-export sleep 3600
+
+docker save tonysobreira/hello:1.0 > save.tar
+docker rmi tonysobreira/hello:1.0
+docker load -i save.tar
+
+
+
+
+
+
+
+
+
+
+

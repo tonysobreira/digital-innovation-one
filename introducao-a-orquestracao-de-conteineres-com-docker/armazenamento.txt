@@ -1,0 +1,39 @@
+    #Volume
+
+docker volume create meuPrimeiroVolume
+
+docker volume ls
+
+docker volume inspect meuPrimeiroVolume
+
+docker run -d -p 80:80 --name container-volume --mount source=meuPrimeiroVolume,target=/usr/share/nginx nginx
+
+cd /var/lib/docker/volumes/meuPrimeiroVolume/_data/html
+edit index.html
+
+    #Bind
+
+cd /var/lib/docker/volumes/meuPrimeiroVolume/_data/html
+#apagar conteudo
+mkdir /html
+docker run -d --name container-bind -p 80:80 -v /html:/usr/share/nginx/html nginx
+echo "TESTE" > index.html
+
+docker exec -it <container-id> bash
+cd /usr/share/nginx/html/
+echo "OLA MUNDO" > teste.html
+
+    #tmpfs
+
+docker run -d --name container-tmpfs --mount type=tmpfs,destination=/cache,tmpfs-size=1000000 busybox sleep 3600
+
+docker exec -it b6 sh
+cd cache/
+dd if=/dev/zero of=1mb.file bs=1024 count=1024
+
+#checar tamanho
+du -sh *
+
+#caso reinicie o container limpa a pasta destination "cache"
+
+

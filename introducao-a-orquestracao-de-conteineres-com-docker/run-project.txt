@@ -1,0 +1,23 @@
+https://github.com/luistkd4/docker101
+
+
+
+play with docker
+git clone https://github.com/luistkd4/docker101.git
+cd docker101/
+cd express-mongo-docker/
+
+#https://docs.docker.com/compose/compose-file/
+#https://docs.docker.com/compose/install/linux/
+
+docker-compose up -d
+
+#Teste alterar 'hello world' -> 'ola mundo' em app.js
+
+docker-compose up --build -d
+
+#apagar containers
+docker-compose down
+
+
+

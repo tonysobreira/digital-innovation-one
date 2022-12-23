@@ -1,0 +1,28 @@
+#Requisitos
+
+64-bit
+Linux kernel 3.10 +
+Iptables 1.4 +
+Cgroup
+
+#
+aws, google cloud, azure
+
+https://azure.microsoft.com/pt-br/free/
+
+#criar máquina virtual linux - ubuntu 16
+
+sudo su
+apt-get update
+
+apt-get install docker.io
+
+#test
+docker --help
+
+docker run -it hello-world
+
+
+
+
+

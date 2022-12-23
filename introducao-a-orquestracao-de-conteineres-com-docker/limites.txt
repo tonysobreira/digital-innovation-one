@@ -1,0 +1,22 @@
+    ##cpu
+
+#imagem para stress
+docker run -d --rm progrium/stress -c 8 -t 30s
+#limitando uso de cpus
+docker run --cpus=".5" -d --rm progrium/stress -c 8 -t 30s
+
+
+    ##memory
+
+#limitar uso de recursos
+
+docker run -d --memory 10m busybox sleep 3600
+
+docker stats
+
+#checar memória livre
+free -m
+
+
+
+

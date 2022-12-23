@@ -1,0 +1,50 @@
+#Principais comandos
+
+#criar container
+docker run
+
+#listar containers
+docker ps
+
+#informações do docker
+docker info
+
+#listar images
+docker images
+
+#executar binário
+docker exec
+
+stop, start
+
+logs
+
+inspect
+
+pull
+
+commit
+
+tag
+
+login, logout
+
+push
+
+search
+
+#remover container
+rm
+
+#remover image
+rmi
+
+export, import
+
+save, load
+
+
+
+
+
+
