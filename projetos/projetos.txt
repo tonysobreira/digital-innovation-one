@@ -6,6 +6,8 @@
 6 - recriando-a-interface-do-netflix
 7 - criando-projeto-para-consultar-a-previsao-do-tempo-via-api
 8 - desenvolvendo-seu-blog-com-as-tecnologias-de-java-e-angular
+9 - construindo-uma-api-rest-de-consulta-de-cidades-do-brasil-do-zero-ate-a-producao
+
 
 
 

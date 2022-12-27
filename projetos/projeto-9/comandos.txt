@@ -1,0 +1,73 @@
+
+docker network create --d bridge postgres-network
+docker run -p 80:80 --name pgadmin-4 --net postgres-network -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' -d dpage/pgadmin4
+docker run --name cities-db -d -p 5432:5432 --net postgres-network -e POSTGRES_USER=postgres_user_city -e POSTGRES_PASSWORD=super_password -e POSTGRES_DB=cities postgres
+
+
+
+
+docker run -d -p 5432:5432 --name my-postgres --net postgres-network -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=mytestdb postgres
+
+
+
+docker network create --driver bridge postgres-network
+
+docker run --name test-postgres --network=postgres-network -e "POSTGRES_PASSWORD=1234" -p 5432:5432 -v /home/development/PostgreSQL:/var/lib/postgresql/data -d postgres
+
+docker run --name test-pgadmin --network=postgres-network -p 15432:80 -e "PGADMIN_DEFAULT_EMAIL=test@gmail.com.br" -e "PGADMIN_DEFAULT_PASSWORD=1234" -d dpage/pgadmin4
+
+
+
+
+##popular dados via container
+
+#abrir pasta onde estão os dados no powershell
+cd ~/workspace/sql-paises-estados-cidades/PostgreSQL
+
+docker run -it --rm --net=host -v ${PWD}:/tmp postgres /bin/bash
+
+psql -h localhost -U postgres_user_city cities -f /tmp/pais.sql
+psql -h localhost -U postgres_user_city cities -f /tmp/estado.sql
+psql -h localhost -U postgres_user_city cities -f /tmp/cidade.sql
+
+#conectar no db
+psql -h localhost -U postgres_user_city cities
+
+CREATE EXTENSION cube; 
+CREATE EXTENSION earthdistance;
+
+
+
+###
+cd ~/workspace/sql-paises-estados-cidades/PostgreSQL
+
+docker run -it --rm --net=host -v $PWD:/tmp postgres /bin/bash
+
+psql -h localhost -U postgres_user_city cities -f /tmp/pais.sql
+psql -h localhost -U postgres_user_city cities -f /tmp/estado.sql
+psql -h localhost -U postgres_user_city cities -f /tmp/cidade.sql
+
+psql -h localhost -U postgres_user_city cities
+
+CREATE EXTENSION cube; 
+CREATE EXTENSION earthdistance;
+###
+#point
+select ((select lat_lon from cidade where id = 4929) <@> (select lat_lon from cidade where id=5254)) as distance;
+#resultado em milhas
+
+#salvador -> lauro de freitas
+(616,	'Salvador',	5,	2927408,	'(-12.9717998504638992,-38.5010986328125)',	-1.29717998504638E+17,	-385010986328125,	3849),
+(511,	'Lauro de Freitas',	5,	2919207,	'(-12.8978004455565998,-38.3209991455077983)',	-1.28978004455565E+17,	-3.83209991455077E+17,	3685),
+select ((select lat_lon from cidade where id = 616) <@> (select lat_lon from cidade where id=511)) as distance;
+
+#cube
+select earth_distance(
+    ll_to_earth(-21.95840072631836,-47.98820114135742), 
+    ll_to_earth(-22.01740074157715,-47.88600158691406)
+) as distance;
+
+
+
+
+
