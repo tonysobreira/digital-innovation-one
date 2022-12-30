@@ -10,6 +10,6 @@ import br.com.globallabs.springwebmvc.model.Jedi;
 @Repository
 public interface JediRepository extends JpaRepository<Jedi, Long> {
 
-	List<Jedi> findByNameContainingIgnoreCase(final String name);
+	List<Jedi> findByNameContainingIgnoreCase(String name);
 
 }

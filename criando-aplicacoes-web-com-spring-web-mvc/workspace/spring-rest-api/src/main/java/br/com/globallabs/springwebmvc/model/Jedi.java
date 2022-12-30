@@ -5,24 +5,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
+@Table(name = "jedi")
 public class Jedi {
 
 	@Id
-	@Column(name = "jedi_id")
+	@Column(name = "id_jedi")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Column(name = "jedi_name")
 	@NotBlank(message = "Name cannot be blank")
 	@Size(min = 3, max = 20, message = "Name must have between 3 and 20 letters")
+	@Column(name = "name")
 	private String name;
 
-	@Column(name = "jedi_lastanme")
 	@Size(max = 20, message = "Last Name must not have more than 20 letters")
+	@Column(name = "last_name")
 	private String lastName;
 
 	public Jedi() {

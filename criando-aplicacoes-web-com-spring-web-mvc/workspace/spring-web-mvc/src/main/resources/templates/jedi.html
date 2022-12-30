@@ -10,23 +10,40 @@
 
 	<div class="container-fluid">
 		<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"></div>
-
+		
 		<h1>Jedi Forces</h1>
 
 		<table class="table">
 			<tr>
-				<th>NAME</th>
-				<th>LASTNAME</th>
+				<th scope="col">ID</th>
+				<th scope="col">NAME</th>
+				<th scope="col">LASTNAME</th>
+				<th scope="col">OPTIONS</th>
 			</tr>
 			<tr th:each="jedi : ${allJedi}">
+				<td th:text="${jedi.id}"></td>
 				<td th:text="${jedi.name}"></td>
 				<td th:text="${jedi.lastName}"></td>
+				<td>
+					<a th:href="@{/jedi/__${jedi.id}__/delete}" onClick="return confirm('Delete?')">Delete</a> 
+					<a th:href="@{/jedi/__${jedi.id}__/update}">Update</a>
+				</td>
 			</tr>
 		</table>
 
-		<br> 
+		<br>
 		
-		<a class="btn btn-link" th:href="@{/new-jedi}" role="button">New Jedi</a>
+		<a class="btn btn-link" href="#" th:href="@{/jedi}">All Jedi</a> | <a class="btn btn-link" href="#" th:href="@{/new-jedi}">New Jedi</a>
+		
+		<form th:action="@{/search}"  method="get">
+		    <div class="mb-3">
+			    <label for="search1" class="form-label">Search</label>
+			    <input id="search1" type="text" name="name" class="form-control" aria-describedby="searchHelp">
+			    <div id="searchHelp" class="form-text">Search.</div>
+		  	</div>
+			<button type="submit" class="btn btn-primary">Search</button>
+		</form>
+		
 	</div>
 
 	<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>

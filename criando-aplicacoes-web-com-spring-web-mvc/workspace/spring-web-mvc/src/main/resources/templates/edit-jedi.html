@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Jedi</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container-fluid">
+		<h1>Edit Jedi</h1>
+
+		<form th:action="@{/jedi}" th:object="${jedi}" method="post">
+			<input type="hidden" name="id" th:field="*{id}">
+
+			<div class="mb-3">
+				<label for="jediName" class="form-label">Name</label> 
+				<input id="jediName" type="text" class="form-control" name="name" th:field="*{name}" th:placeholder="Name" /> 
+				<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="form-text">Name Error</span> 
+			</div>
+
+			<div class="mb-3">
+				<label for="jediLastName" class="form-label">Last Name</label>
+				<input id="jediLastName" type="text" class="form-control" name="lastName" th:field="*{lastName}" th:placeholder="LastName" />
+				<span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="form-text">LastName Error</span> 
+			</div>
+			
+			<button type="submit" class="btn btn-primary">Update Jedi</button>
+		</form>
+		
+		<br>
+		
+		<a class="btn btn-link" th:href="@{/jedi}" role="button">Jedi</a>
+	</div>
+
+	<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -5,9 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.globallabs</groupId>
-	<artifactId>spring-web-mvc</artifactId>
+	<artifactId>spring-rest-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-web-mvc</name>
+
+	<name>spring-rest-api</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
