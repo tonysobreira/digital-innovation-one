@@ -1,4 +1,4 @@
-package digitalinnovation.example.exception;
+package digitalinnovation.example.restfull.exception;
 
 public class SoldadoNotFoundException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

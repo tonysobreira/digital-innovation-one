@@ -1,4 +1,4 @@
-package digitalinnovation.example.controller.request;
+package digitalinnovation.example.restfull.controller.request;
 
 public class SoldadoEditRequest {
 
@@ -8,13 +8,16 @@ public class SoldadoEditRequest {
 
 	private String arma;
 
+	private String status;
+
 	public SoldadoEditRequest() {
 	}
 
-	public SoldadoEditRequest(String nome, String raca, String arma) {
+	public SoldadoEditRequest(String nome, String raca, String arma, String status) {
 		this.nome = nome;
 		this.raca = raca;
 		this.arma = arma;
+		this.status = status;
 	}
 
 	public String getNome() {
@@ -39,6 +42,14 @@ public class SoldadoEditRequest {
 
 	public void setArma(String arma) {
 		this.arma = arma;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

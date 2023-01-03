@@ -1,17 +1,7 @@
-package digitalinnovation.example.model;
+package digitalinnovation.example.restfull.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+public class SoldadoDTO {
 
-@Entity
-@Table(name = "soldado")
-public class Soldado {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	private String nome;
@@ -20,13 +10,16 @@ public class Soldado {
 
 	private String arma;
 
-	public Soldado() {
+	private String status;
+
+	public SoldadoDTO() {
 	}
 
-	public Soldado(String nome, String raca, String arma) {
+	public SoldadoDTO(String nome, String raca, String arma, String status) {
 		this.nome = nome;
 		this.raca = raca;
 		this.arma = arma;
+		this.status = status;
 	}
 
 	public Long getId() {
@@ -59,6 +52,14 @@ public class Soldado {
 
 	public void setArma(String arma) {
 		this.arma = arma;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }
