@@ -1,12 +1,14 @@
 package digitalinnovation.example.restfull.dto;
 
+import digitalinnovation.example.restfull.enums.Raca;
+
 public class SoldadoDTO {
 
 	private Long id;
 
 	private String nome;
 
-	private String raca;
+	private Raca raca;
 
 	private String arma;
 
@@ -15,7 +17,7 @@ public class SoldadoDTO {
 	public SoldadoDTO() {
 	}
 
-	public SoldadoDTO(String nome, String raca, String arma, String status) {
+	public SoldadoDTO(String nome, Raca raca, String arma, String status) {
 		this.nome = nome;
 		this.raca = raca;
 		this.arma = arma;
@@ -38,11 +40,11 @@ public class SoldadoDTO {
 		this.nome = nome;
 	}
 
-	public String getRaca() {
+	public Raca getRaca() {
 		return raca;
 	}
 
-	public void setRaca(String raca) {
+	public void setRaca(Raca raca) {
 		this.raca = raca;
 	}
 
