@@ -6,7 +6,17 @@ https://github.com/tonysobreira/digital-innovation-one/tree/main/criando-aplicac
 
 Docker:
 https://github.com/tonysobreira/digital-innovation-one/tree/main/projetos/projeto-8
+https://github.com/tonysobreira/digital-innovation-one/tree/main/introducao-a-orquestracao-de-conteineres-com-docker
 
+Micro Services Spring Cloud
+https://github.com/tonysobreira/digital-innovation-one/tree/main/microservicos-spring-cloud-java
+https://github.com/tonysobreira/digital-innovation-one/tree/main/projetos/projeto-1
+https://github.com/tonysobreira/digital-innovation-one/tree/main/projetos/projeto-5
+
+
+
+algaworks jpa:
+https://github.com/algaworks/curso-jpa-hibernate/blob/master/Aulas/Relacionamento%20Um-Para-Um/locadora-veiculo-web/src/main/java/com/algaworks/curso/jpa2/util/jpa/TransactionInterceptor.java
 
 
 
