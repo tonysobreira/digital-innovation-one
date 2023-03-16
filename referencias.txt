@@ -4,6 +4,9 @@ https://github.com/tonysobreira/digital-innovation-one/tree/main/projetos/projet
 Feign Client:
 https://github.com/tonysobreira/digital-innovation-one/tree/main/criando-aplicacoes-web-com-spring-web-mvc/workspace
 
+Docker:
+https://github.com/tonysobreira/digital-innovation-one/tree/main/projetos/projeto-8
+
 
 
 
