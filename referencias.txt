@@ -26,6 +26,25 @@ https://github.com/algaworks/curso-jpa-hibernate/blob/master/Aulas/Relacionament
 #telegram bot
 https://github.com/tonysobreira/digital-innovation-one/tree/main/criando-aplicacoes-web-com-spring-web-mvc/workspace/spring-web
 
+
+
+#object mapper
+https://github.com/tonysobreira/digital-innovation-one/blob/main/criando-aplicacoes-web-com-spring-web-mvc/workspace/spring-web/src/main/java/digitalinnovation/example/controller/TelegramController.java
+
+https://github.com/tonysobreira/digital-innovation-one/blob/main/criando-aplicacoes-web-com-spring-web-mvc/workspace/restfull/src/main/java/digitalinnovation/example/restfull/config/Jackson.java
+
+#feign client + rest template
+https://github.com/tonysobreira/digital-innovation-one/tree/main/criando-aplicacoes-web-com-spring-web-mvc/workspace/spring-web/src/main/java/digitalinnovation/example/client
+
+
+
+
+
+#spring cloud
+https://github.com/tonysobreira/digital-innovation-one/tree/main/projetos/projeto-1
+
+
+
 #telegram
 
 BotFather
